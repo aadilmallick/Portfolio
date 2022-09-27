@@ -1,0 +1,31 @@
+$website-width: 1280px;
+$primary-color: #ffbc00;
+$light-color: #f4f4f4;
+$dark-color: #333;
+$medium-color: #ccc;
+
+// images
+$bg-image: url("../images/myimages/aadilstanding.jpg");
+$overlay-light: linear-gradient(
+  to bottom,
+  rgba(0, 0, 0, 0.3),
+  rgba(0, 0, 0, 0)
+);
+$overlay-medium: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+$overlay-heavy: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+
+// animations
+$transition-fast: 0.25s;
+$transition-medium: 0.5s;
+$transition-slow: 0.75s;
+$transition-very-slow: 1s;
+
+// font size
+$font-sm: 1rem;
+$font-md: 1.5rem;
+$font-lg: 2rem;
+
+// text color
+$text-white: white;
+$text-dark: black;
+$text-primary: $primary-color;

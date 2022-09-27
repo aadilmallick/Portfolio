@@ -1,0 +1,115 @@
+@import "variables";
+@import "utilities";
+@import "mixins";
+
+#header-home {
+  &.header-inner {
+    background: $overlay-medium, $bg-image no-repeat 20% 30% / cover;
+    height: 5.5rem;
+    border-bottom: 3px solid $primary-color;
+    padding-bottom: 0;
+
+    .container {
+      height: 100%;
+    }
+
+    #main-nav {
+      align-items: center;
+      height: 100%;
+    }
+  }
+}
+
+#about {
+  &-a {
+    @include py(3);
+    .about-info {
+      display: grid;
+      grid-template-areas:
+        "bioimage bio bio"
+        "award1 award2 award3";
+      gap: 1.2rem;
+    }
+
+    .bio-image {
+      grid-area: bioimage;
+      transition: all $transition-slow;
+      &:hover {
+        border-radius: 50%;
+      }
+    }
+
+    .bio {
+      grid-area: bio;
+      padding: 1rem;
+      border-left: 3px solid $primary-color;
+      background-color: $light-color;
+    }
+
+    .award-1 {
+      grid-area: award1;
+    }
+
+    .award-2 {
+      grid-area: award2;
+    }
+
+    .award-3 {
+      grid-area: award3;
+    }
+
+    .award-1,
+    .award-2,
+    .award-3 {
+      i {
+        color: $primary-color;
+        transition: color $transition-medium;
+        &:hover {
+          color: $dark-color;
+        }
+
+        &:hover + h3 {
+          color: $primary-color;
+        }
+      }
+
+      h3 {
+        transition: color $transition-medium;
+      }
+    }
+  }
+  &-b {
+    background-color: $dark-color;
+    color: white;
+    @include py(3);
+
+    .progress {
+      overflow: hidden;
+      height: 20px;
+      background-color: $medium-color;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+
+      &-1 {
+        width: 90%;
+        height: 100%;
+        @extend .bg-gradient-rainbow;
+      }
+      &-2 {
+        width: 90%;
+        height: 100%;
+        @extend .bg-gradient-rainbow;
+      }
+      &-3 {
+        width: 90%;
+        height: 100%;
+        @extend .bg-gradient-rainbow;
+      }
+      &-4 {
+        width: 90%;
+        height: 100%;
+        @extend .bg-gradient-rainbow;
+      }
+    }
+  }
+}

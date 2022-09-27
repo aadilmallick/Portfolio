@@ -1,0 +1,121 @@
+.container {
+  max-width: $website-width;
+  padding: 0 2rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 2rem;
+  transition: all 0.5s;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+  &:hover {
+    background-color: $primary-color;
+  }
+  &-primary {
+    color: $dark-color;
+    background-color: $primary-color;
+  }
+  &-light {
+    color: $dark-color;
+    background-color: $light-color;
+  }
+  &-dark {
+    color: $light-color;
+    background-color: $dark-color;
+  }
+}
+
+//text
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: $primary-color;
+}
+
+.section-title {
+  font-size: 2rem;
+  display: block;
+  padding-bottom: 0.5rem;
+  font-weight: 100;
+}
+
+// gradients
+
+.tg {
+  &-red-orange {
+    background: #ffbc00;
+    background: linear-gradient(to right, #ffbc00 0%, #cf1512 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-rainbow {
+    background: violet;
+    background: linear-gradient(
+      to right,
+      #ee82ee,
+      #4b0082,
+      #0000ff,
+      #008000,
+      #ffa500,
+      #ffff00,
+      #ff0000
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-rainbow-harsh {
+    background: #ee82ee;
+    background: linear-gradient(
+      to right,
+      #ee82ee 0%,
+      #4b0082 17%,
+      #0000ff 34%,
+      #008000 51%,
+      #ffa500 68%,
+      #ffff00 85%,
+      #ff0000 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.bg-gradient {
+  &-rainbow {
+    background: violet;
+    background: linear-gradient(
+      to right,
+      #ee82ee,
+      #4b0082,
+      #0000ff,
+      #008000,
+      #ffa500,
+      #ffff00,
+      #ff0000
+    );
+  }
+}
+// other
+.divider {
+  &-sm {
+    border-bottom: 3px solid $primary-color;
+    margin: 0.3rem auto;
+    margin-bottom: 0.75rem;
+    width: 10%;
+  }
+  &-thin {
+    border-bottom: 1px solid $light-color;
+  }
+}

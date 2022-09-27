@@ -1,0 +1,44 @@
+@import "variables";
+
+@mixin py($amount) {
+  padding: $amount * 1rem 0;
+}
+
+@mixin px($amount) {
+  padding: 0 $amount * 1rem;
+}
+
+@mixin padding($amount) {
+  padding: $amount * 1rem;
+}
+
+@mixin my($amount) {
+  margin: $amount * 1rem 0;
+}
+
+@mixin mx($amount) {
+  margin: 0 $amount * 1rem;
+}
+
+@mixin margin($amount) {
+  margin: $amount * 1rem;
+}
+
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return $text-dark;
+  } @else {
+    @return $text-white;
+  }
+}
+
+@mixin text-gradient($string) {
+  @if ($string == "red-orange") {
+    @extend .tg-red-orange;
+  }
+}
+
+@mixin divider() {
+  border-bottom: 5px solid $light-color;
+  padding-bottom: 1rem;
+}

@@ -1,0 +1,144 @@
+@import "variables";
+@import "mixins";
+
+@media (max-width: 800px) {
+  #header-home {
+    height: 30rem;
+
+    .header-content {
+      padding-top: 5rem;
+      display: block;
+      h1 {
+        font-size: 3rem;
+      }
+    }
+
+    .container {
+      height: 100%;
+    }
+  }
+  #gallery {
+    .items {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem 0;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  #header-home {
+    .header-content {
+      padding-top: 3rem;
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+    #main-nav {
+      flex-direction: column;
+      align-items: center;
+
+      li {
+        padding: 1rem;
+      }
+    }
+    &.header-inner {
+      height: 10rem;
+    }
+  }
+
+  #home {
+    &-a {
+      .specials {
+        grid-template-columns: 1fr;
+        gap: 2rem 0;
+        div {
+          @include divider;
+
+          &:last-child {
+            border: none;
+          }
+        }
+      }
+    }
+    &-b {
+      .stats {
+        grid-template-columns: 1fr;
+      }
+    }
+    &-c {
+      .process {
+        grid-template-columns: 1fr;
+        gap: 2rem 0;
+      }
+    }
+  }
+
+  #gallery {
+    .items {
+      grid-template-columns: 1fr;
+      gap: 2rem 0;
+    }
+  }
+
+  #main-footer {
+    height: 7rem;
+    .footer-content {
+      flex-direction: column;
+    }
+  }
+
+  #about-a {
+    .about-info {
+      grid-template-areas:
+        "bio-image"
+        "bio"
+        "award1"
+        "award2"
+        "award3";
+      .bio-image {
+        grid-area: bio-image;
+      }
+    }
+  }
+
+  #contact {
+    &-a {
+      .text-fields {
+        grid-template-columns: 1fr;
+
+        .message-input {
+          grid-column: 1;
+        }
+      }
+    }
+    &-b {
+      .contact-info {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        div {
+          margin-bottom: 2rem;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-height: 580px) {
+  #header-home {
+    .header-content {
+      padding-top: 3rem;
+      display: block;
+      h1 {
+        font-size: 3rem;
+      }
+    }
+
+    .container {
+      height: 100%;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import "variables";
+@import "utilities";
+@import "mixins";
+
+#contact-a {
+  @include py(3);
+
+  .text-fields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.2rem;
+    margin-bottom: 1.2rem;
+
+    .message-input {
+      grid-column: 1 / span 2;
+      height: 100px;
+    }
+
+    .text-input {
+      padding: 0.5rem 1rem;
+    }
+  }
+
+  button[type="submit"] {
+    width: 50%;
+  }
+}
+
+#contact-b {
+  background-color: $dark-color;
+  color: $text-white;
+  @include py(3);
+  .contact-info {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+#contact-c {
+  background: $primary-color;
+  @include py(3);
+
+  h1 {
+    font-size: 4rem;
+  }
+}
