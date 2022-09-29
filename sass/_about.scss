@@ -44,6 +44,23 @@
       padding: 1rem;
       border-left: 3px solid $primary-color;
       background-color: $light-color;
+      h1,
+      h2,
+      h3,
+      h4 {
+        text-transform: uppercase;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-weight: 100;
+        @include py(0.5);
+        @include my(1);
+        background-color: $primary-fade;
+      }
     }
 
     .award-1 {
@@ -91,24 +108,48 @@
       margin-bottom: 1rem;
 
       &-1 {
-        width: 90%;
+        @include progressbar(40);
         height: 100%;
         @extend .bg-gradient-rainbow;
       }
       &-2 {
-        width: 90%;
+        @include progressbar(250);
         height: 100%;
         @extend .bg-gradient-rainbow;
       }
       &-3 {
-        width: 90%;
+        @include progressbar(80);
         height: 100%;
         @extend .bg-gradient-rainbow;
       }
       &-4 {
-        width: 90%;
+        @include progressbar(220);
         height: 100%;
         @extend .bg-gradient-rainbow;
+      }
+      &-5 {
+        @include progressbar(100);
+        height: 100%;
+        @extend .bg-gradient-rainbow;
+      }
+      &-6 {
+        @include progressbar(70);
+        height: 100%;
+        @extend .bg-gradient-rainbow;
+      }
+    }
+  }
+  &-c {
+    @include py(3);
+    .icon-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      div {
+        @include padding(1);
+        &:nth-child(3n + 1) {
+          background-color: $primary-color;
+        }
       }
     }
   }
