@@ -92,6 +92,7 @@ body {
   font-family: "Dosis", sans-serif;
   line-height: 1.5;
   background: white;
+  font-size: 18px;
 }
 
 a {
@@ -578,14 +579,16 @@ img {
 .items {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
-  gap: 10px;
+  gap: 20px;
+  padding-bottom: 10px;
 }
 
 .item {
   position: relative;
   background-color: #ffbc00;
   overflow: hidden;
+  transition: box-shadow 0.5s;
+  border: 3px dotted transparent;
 }
 .item::after {
   content: "";
@@ -599,6 +602,9 @@ img {
   height: 100%;
   transform: scale(2) translateX(-75%) translateY(-75%) rotate(-28deg);
   transition: transform 3s cubic-bezier(0.2, 1, 0.3, 1);
+}
+.item:hover {
+  box-shadow: 10px 10px;
 }
 .item:hover::after {
   transform: scale(2) translateX(0) translateY(0) rotate(-28deg);
@@ -655,13 +661,17 @@ img {
   opacity: 0.7;
   margin: 0;
 }
+.item-text-title {
+  padding: 1rem;
+}
 .item .link-container {
   display: flex;
   justify-content: center;
 }
 .item .link-container a {
   color: white;
-  padding: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   transition: color 0.5s;
 }
 .item .link-container a:hover {
