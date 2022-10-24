@@ -618,8 +618,6 @@ img {
 }
 .item-image {
   transition: transform 1s;
-  height: auto;
-  display: block;
 }
 .item-image::before {
   content: "";
@@ -628,12 +626,7 @@ img {
   overflow: hidden;
 }
 .item-image img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  line-height: 0;
+  width: 500px;
 }
 .item-text {
   position: absolute;
