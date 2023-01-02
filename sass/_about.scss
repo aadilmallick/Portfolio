@@ -141,6 +141,12 @@
   }
   &-c {
     @include py(3);
+    img {
+      object-fit: cover;
+      width: 3rem;
+      height: 3rem;
+      border: 1px solid black;
+    }
     .icon-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);

@@ -476,6 +476,12 @@ img {
 #about-c {
   padding: 3rem 0;
 }
+#about-c img {
+  object-fit: cover;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid black;
+}
 #about-c .icon-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
