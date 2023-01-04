@@ -1,6 +1,15 @@
 @import "variables";
 @import "mixins";
 
+@media (max-width: 950px) {
+  #gallery {
+    .items {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+  }
+}
+
 @media (max-width: 800px) {
   #header-home {
     height: 30rem;
@@ -15,12 +24,6 @@
 
     .container {
       height: 100%;
-    }
-  }
-  #gallery {
-    .items {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem 0;
     }
   }
 }
