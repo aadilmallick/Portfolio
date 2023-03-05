@@ -595,6 +595,30 @@ img {
   transition: box-shadow 0.5s;
   border: 3px dotted transparent;
 }
+.item .item-caption {
+  position: absolute;
+  top: 0px;
+  left: -1rem;
+  color: white;
+  z-index: 50;
+  transition: opacity 0.5s;
+}
+.item .item-caption div {
+  width: 95%;
+  position: relative;
+}
+.item .item-caption div img {
+  width: 100%;
+  object-fit: cover;
+}
+.item .item-caption div h4,
+.item .item-caption div p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1.5rem;
+  text-transform: uppercase;
+}
 .item::after {
   content: "";
   position: absolute;
@@ -613,6 +637,9 @@ img {
 }
 .item:hover::after {
   transform: scale(2) translateX(0) translateY(0) rotate(-28deg);
+}
+.item:hover .item-caption {
+  opacity: 0;
 }
 .item:hover .item-image {
   transform: scale(1.2);
@@ -674,6 +701,8 @@ img {
 .item .link-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .item .link-container a {
   color: white;

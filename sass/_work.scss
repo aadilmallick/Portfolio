@@ -5,6 +5,7 @@
 #gallery {
   @include py(3);
 }
+
 .items {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -19,6 +20,31 @@
   overflow: hidden;
   transition: box-shadow 0.5s;
   border: 3px dotted transparent;
+
+  .item-caption {
+    position: absolute;
+    top: 0px;
+    left: -1rem;
+    color: white;
+    z-index: 50;
+    transition: opacity 0.5s;
+    div {
+      width: 95%;
+      position: relative;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+      h4,
+      p {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: 1.5rem;
+        text-transform: uppercase;
+      }
+    }
+  }
 
   &::after {
     content: "";
@@ -38,6 +64,9 @@
     box-shadow: 10px 10px;
     &::after {
       transform: scale(2) translateX(0) translateY(0) rotate(-28deg);
+    }
+    .item-caption {
+      opacity: 0;
     }
     .item-image {
       transform: scale(1.2);
@@ -108,6 +137,8 @@
   .link-container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     a {
       color: white;
       padding-left: 1rem;
