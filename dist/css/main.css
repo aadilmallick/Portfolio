@@ -144,6 +144,8 @@ img {
 }
 #main-nav ul {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 #main-nav li {
   padding: 1rem 1.5rem;
@@ -860,7 +862,7 @@ img {
 }
 @media (max-width: 500px) {
   #header-home .header-content {
-    padding-top: 3rem;
+    padding-top: 1.5rem;
   }
   #header-home .header-content h1 {
     font-size: 1.8rem;
@@ -870,7 +872,7 @@ img {
     align-items: center;
   }
   #header-home #main-nav li {
-    padding: 1rem;
+    padding: 0.5rem;
   }
   #header-home.header-inner {
     height: 10rem;
