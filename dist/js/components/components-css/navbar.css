@@ -1,0 +1,49 @@
+#header-home {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)),
+    url("../../../images/myimages/aadilstanding.jpg") no-repeat center
+      right/cover;
+  height: 100vh;
+  color: white;
+}
+#header-home .container {
+  height: 70%;
+}
+#header-home .logo {
+  width: 70px;
+  height: 70px;
+  color: white;
+  transition: all 0.5s;
+}
+#header-home .header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+#header-home .header-content h1 {
+  font-size: 5rem;
+}
+
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+}
+#main-nav ul {
+  display: flex;
+}
+#main-nav li {
+  padding: 1rem 1.5rem;
+}
+#main-nav a {
+  text-transform: uppercase;
+  color: white;
+  border-bottom: 3px transparent solid;
+  transition: border-bottom 0.5s;
+}
+#main-nav a:hover {
+  border-bottom: 3px solid white;
+}
+#main-nav a.current {
+  border-color: #ffbc00;
+}
