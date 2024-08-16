@@ -1,3 +1,10 @@
+.container {
+  max-width: 1280px;
+  padding: 0 2rem;
+  margin: auto;
+  overflow: hidden;
+}
+
 #header-home {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)),
     url("../../../images/myimages/aadilstanding.jpg") no-repeat center
@@ -46,4 +53,37 @@
 }
 #main-nav a.current {
   border-color: #ffbc00;
+}
+
+#header-home.header-inner {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("/dist/images/myimages/aadilstanding.jpg") no-repeat 20% 30% / cover;
+  height: 5.5rem;
+  border-bottom: 3px solid #ffbc00;
+  padding-bottom: 0;
+}
+#header-home.header-inner .container {
+  height: 100%;
+}
+#header-home.header-inner #main-nav {
+  align-items: center;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+}
+
+img {
+  width: 100%;
 }
