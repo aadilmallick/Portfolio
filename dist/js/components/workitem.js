@@ -6,14 +6,44 @@ class DatasetHandler {
     }
 }
 class AppTypeHandler extends DatasetHandler {
-    handle(property) {
-        this.element.textContent = property;
+    handle(dataAttrValue) {
+        this.element.textContent = dataAttrValue;
     }
 }
 class MainImageHandler extends DatasetHandler {
-    handle(property) { }
+    handle(dataAttrValue) {
+        this.element.src = dataAttrValue;
+    }
+}
+class AppStackHandler extends DatasetHandler {
+    handle(dataAttrValue) {
+        this.element.textContent = dataAttrValue;
+    }
+}
+class AppTitleHandler extends DatasetHandler {
+    handle(dataAttrValue) {
+        this.element.textContent = dataAttrValue;
+    }
+}
+class DemoLinkHandler extends DatasetHandler {
+    handle(dataAttrValue) {
+        this.element.href = dataAttrValue;
+    }
+}
+class SeeLinkHandler extends DatasetHandler {
+    handle(dataAttrValue) {
+        this.element.href = dataAttrValue;
+    }
 }
 class WorkItem extends WebComponent {
+    static get observedAttributes() {
+        return ["alt"];
+    }
+    attributeChangedCallback(attrName, oldVal, newVal) {
+        if (attrName === "alt") {
+            this.$("#main-image").alt = newVal;
+        }
+    }
     //   private desiredElementsMap: Record<string, HTMLElement>;
     constructor() {
         super({
@@ -21,30 +51,27 @@ class WorkItem extends WebComponent {
             HTMLContent: WorkItem.content,
             templateId: "work-item-template",
         });
-        const desiredElementsMap = {
-            "app-type": this.$("#app-type"),
-            "main-image": this.$("#main-image"),
-            "app-category": this.$("#app-category"),
-            "app-title": this.$("#app-title"),
-            "demo-link": this.$("#demo-link"),
-            "see-link": this.$("#see-link"),
-        };
         const datasetHandlerMap = {
-            "app-type": new AppTypeHandler(desiredElementsMap["app-type"], this.dataset),
-            "main-image": this.$("#main-image"),
-            "app-category": this.$("#app-category"),
-            "app-title": this.$("#app-title"),
-            "demo-link": this.$("#demo-link"),
-            "see-link": this.$("#see-link"),
+            appType: new AppTypeHandler(this.$("#app-type"), this.dataset),
+            mainImage: new MainImageHandler(this.$("#main-image"), this.dataset),
+            appStack: new AppStackHandler(this.$("#app-stack"), this.dataset),
+            appTitle: new AppTitleHandler(this.$("#app-title"), this.dataset),
+            demoLink: new DemoLinkHandler(this.$("#demo-link"), this.dataset),
+            seeLink: new SeeLinkHandler(this.$("#see-link"), this.dataset),
         };
-        console.log(this.dataset);
+        console.log(this.dataset); // camelcases attribute names
+        for (let key in this.dataset) {
+            if (!this.dataset[key])
+                throw new Error(`Data attribute ${key} is empty`);
+            datasetHandlerMap[key].handle(this.dataset[key]);
+        }
     }
 }
 WorkItem.content = `
     <div class="item">
         <div class="item-caption">
             <div>
-                <img src="./images/myimages/Gradient.png" alt="" />
+                <img src="./images/myimages/Gradient.png" alt="" id="#gradient-image" />
                 <p id="app-type"></p>
             </div>
         </div>
@@ -53,7 +80,7 @@ WorkItem.content = `
         </div>
         <div class="item-text">
             <div class="item-text-wrap">
-                <p class="item-text-category" id="app-category"></p>
+                <p class="item-text-category" id="app-stack"></p>
                 <h2 class="item-text-title" id="app-title"></h2>
                 <div class="link-container">
                     <a href="" target="_blank" id="demo-link">Demo</a>

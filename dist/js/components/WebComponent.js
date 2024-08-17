@@ -22,13 +22,29 @@ class WebComponent extends HTMLElement {
         this.$ = this.template.content.querySelector.bind(this.template.content);
         this.loadExternalCSS(options.cssFileName);
     }
+    // called when element is inserted to the DOM
     connectedCallback() {
         const content = this.template.content.cloneNode(true);
         this.shadow.appendChild(this.styles);
         this.shadow.appendChild(content);
     }
     disconnectedCallback() { } // triggered when element is removed from document
-    adoptedCallback() { } // triggered when element is moved to new document
+    adoptedCallback() { } // triggered when element is moved to new document (only with iframes)
+    // region ATTRIBUTES
+    static get observedAttributes() {
+        return [];
+    }
+    getAttr(attrName) {
+        const attr = this.attributes.getNamedItem(attrName);
+        return attr === null || attr === void 0 ? void 0 : attr.value;
+    }
+    setAttr(attrName, value) {
+        this.setAttribute(attrName, value);
+    }
+    removeAttr(attrName) {
+        this.removeAttribute(attrName);
+    }
+    // removed when any keys in the observedAttributes getter changes.
     attributeChangedCallback(attrName, oldVal, newVal) { }
     loadExternalCSS(file) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -38,6 +54,7 @@ class WebComponent extends HTMLElement {
         });
     }
 }
+// change this depending on where the css files are located
 WebComponent.constants = {
     CSS_PATH: "js/components/components-css",
 };
