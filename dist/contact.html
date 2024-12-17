@@ -80,15 +80,9 @@
               name="email"
               required
             />
-            <input
-              type="text"
-              class="text-input phone-input"
-              placeholder="Phone Number"
-              name="phone"
-            />
             <textarea
               class="text-input message-input"
-              placeholder="Name"
+              placeholder="Send me a message..."
               name="message"
               required
             ></textarea>
@@ -96,7 +90,7 @@
               <div data-netlify-recaptcha="true"></div>
             </div>
           </div>
-          <button type="submit" class="btn btn-dark">Submit</button>
+          <button id="submit" type="submit" class="btn btn-dark">Submit</button>
         </form>
       </div>
     </section>
@@ -129,5 +123,19 @@
         </div>
       </div>
     </footer>
+
+    <script text="text/javascript" defer>
+      document.querySelector("form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const linkElement = document.createElement("a");
+        linkElement.href = `mailto:aadiltj.mallick@gmail.com?subject=${e.target.subject.value}&body=${e.target.message.value}`;
+        linkElement.click();
+        setTimeout(() => {
+          document.querySelector("button[type='submit']").click();
+        }, 50);
+      }, {
+        once: true
+      });
+    </script>
   </body>
 </html>

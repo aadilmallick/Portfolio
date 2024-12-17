@@ -62,7 +62,7 @@ export default abstract class WebComponent extends HTMLElement {
 
   // region ATTRIBUTES
   static get observedAttributes() {
-    return [] as const
+    return [] as readonly string[];
   }
 
   getAttr(attrName: (typeof WebComponent["observedAttributes"])[number]) {

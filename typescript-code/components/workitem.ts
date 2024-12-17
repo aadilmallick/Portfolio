@@ -46,12 +46,12 @@ export default class WorkItem extends WebComponent {
     <div class="item">
         <div class="item-caption">
             <div>
-                <img src="./images/myimages/Gradient.png" alt="" id="#gradient-image" />
+                <img src="./images/myimages/Gradient.png" alt="" id="#gradient-image" loading="lazy" />
                 <p id="app-type"></p>
             </div>
         </div>
         <div class="item-image">
-            <img src="" alt="" id="main-image" />
+            <img src="" alt="" id="main-image" loading="lazy" />
         </div>
         <div class="item-text">
             <div class="item-text-wrap">
@@ -118,7 +118,7 @@ export default class WorkItem extends WebComponent {
     console.log(this.dataset); // camelcases attribute names
     for (let key in this.dataset) {
       if (!this.dataset[key]) throw new Error(`Data attribute ${key} is empty`);
-      datasetHandlerMap[key].handle(this.dataset[key]);
+      datasetHandlerMap[key].handle(this.dataset[key]!);
     }
   }
 }

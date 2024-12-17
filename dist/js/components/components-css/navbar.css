@@ -38,9 +38,10 @@
 }
 #main-nav ul {
   display: flex;
+  flex-wrap: wrap;
 }
 #main-nav li {
-  padding: 1rem 1.5rem;
+  padding: 0.25rem 0.5rem;
 }
 #main-nav a {
   text-transform: uppercase;
@@ -61,7 +62,12 @@
   height: 5.5rem;
   border-bottom: 3px solid #ffbc00;
   padding-bottom: 0;
+
+  @media (max-width: 500px) {
+    height: 15rem;
+  }
 }
+
 #header-home.header-inner .container {
   height: 100%;
 }

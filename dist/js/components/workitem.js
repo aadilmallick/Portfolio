@@ -71,12 +71,12 @@ WorkItem.content = `
     <div class="item">
         <div class="item-caption">
             <div>
-                <img src="./images/myimages/Gradient.png" alt="" id="#gradient-image" />
+                <img src="./images/myimages/Gradient.png" alt="" id="#gradient-image" loading="lazy" />
                 <p id="app-type"></p>
             </div>
         </div>
         <div class="item-image">
-            <img src="" alt="" id="main-image" />
+            <img src="" alt="" id="main-image" loading="lazy" />
         </div>
         <div class="item-text">
             <div class="item-text-wrap">
