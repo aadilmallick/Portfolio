@@ -1,5 +1,7 @@
 import WebComponent from "./WebComponent.js";
 class DatasetHandler {
+    element;
+    dataset;
     constructor(element, dataset) {
         this.element = element;
         this.dataset = dataset;
@@ -36,6 +38,29 @@ class SeeLinkHandler extends DatasetHandler {
     }
 }
 class WorkItem extends WebComponent {
+    static content = `
+    <div class="item">
+        <div class="item-caption">
+            <div>
+                <img src="./images/myimages/Gradient.png" alt="" id="#gradient-image" loading="lazy" />
+                <p id="app-type"></p>
+            </div>
+        </div>
+        <div class="item-image">
+            <img src="" alt="" id="main-image" loading="lazy" />
+        </div>
+        <div class="item-text">
+            <div class="item-text-wrap">
+                <p class="item-text-category" id="app-stack"></p>
+                <h2 class="item-text-title" id="app-title"></h2>
+                <div class="link-container">
+                    <a href="" target="_blank" id="demo-link">Demo</a>
+                    <a href="" id="see-link" target="_blank">See it</a>
+                </div>
+            </div>
+        </div>
+    </div>
+  `;
     static get observedAttributes() {
         return ["alt"];
     }
@@ -67,28 +92,5 @@ class WorkItem extends WebComponent {
         }
     }
 }
-WorkItem.content = `
-    <div class="item">
-        <div class="item-caption">
-            <div>
-                <img src="./images/myimages/Gradient.png" alt="" id="#gradient-image" loading="lazy" />
-                <p id="app-type"></p>
-            </div>
-        </div>
-        <div class="item-image">
-            <img src="" alt="" id="main-image" loading="lazy" />
-        </div>
-        <div class="item-text">
-            <div class="item-text-wrap">
-                <p class="item-text-category" id="app-stack"></p>
-                <h2 class="item-text-title" id="app-title"></h2>
-                <div class="link-container">
-                    <a href="" target="_blank" id="demo-link">Demo</a>
-                    <a href="" id="see-link" target="_blank">See it</a>
-                </div>
-            </div>
-        </div>
-    </div>
-  `;
 export default WorkItem;
 customElements.define("work-item", WorkItem);

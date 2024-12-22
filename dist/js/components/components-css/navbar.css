@@ -58,7 +58,7 @@
 
 #header-home.header-inner {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("/dist/images/myimages/aadilstanding.jpg") no-repeat 20% 30% / cover;
+    url("images/myimages/aadilstanding.jpg") no-repeat 20% 30% / cover;
   height: 5.5rem;
   border-bottom: 3px solid #ffbc00;
   padding-bottom: 0;

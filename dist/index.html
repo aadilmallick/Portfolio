@@ -27,7 +27,18 @@
     <meta name="twitter:description" content="Hi, I'm Aadil Mallick. Programmer, Web Developer, Web Designer, ML Engineer, and more." />
     <meta name="twitter:image" content="https://i.postimg.cc/65MbpVJr/aadilbrickbg.jpg" />
     <title>Aadil Mallick | Web Developer</title>
-    <link rel="preload" href="images/myimages/aadilstanding.jpg" as="image">
+
+    <script type="speculationrules">
+      {
+        "prerender": [
+          {
+            "where": { "href_matches": "/*.html" },
+            "eagerness": "eager"
+          }
+        ]
+      }
+    </script>
+
     <link rel="shortcut icon" type="image/x-icon" href="faviconaadil.ico">
     <link
       rel="stylesheet"

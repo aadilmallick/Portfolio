@@ -1,13 +1,12 @@
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 class WebComponent extends HTMLElement {
+    shadow;
+    styles;
+    template;
+    $;
+    // change this depending on where the css files are located
+    static constants = {
+        CSS_PATH: "js/components/components-css",
+    };
     static createTemplate(templateId, HTMLContent) {
         const template = document.createElement("template");
         template.id = templateId;
@@ -36,7 +35,7 @@ class WebComponent extends HTMLElement {
     }
     getAttr(attrName) {
         const attr = this.attributes.getNamedItem(attrName);
-        return attr === null || attr === void 0 ? void 0 : attr.value;
+        return attr?.value;
     }
     setAttr(attrName, value) {
         this.setAttribute(attrName, value);
@@ -46,16 +45,10 @@ class WebComponent extends HTMLElement {
     }
     // removed when any keys in the observedAttributes getter changes.
     attributeChangedCallback(attrName, oldVal, newVal) { }
-    loadExternalCSS(file) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const request = yield fetch(WebComponent.constants.CSS_PATH + "/" + file);
-            const css = yield request.text();
-            this.styles.textContent = css;
-        });
+    async loadExternalCSS(file) {
+        const request = await fetch(WebComponent.constants.CSS_PATH + "/" + file);
+        const css = await request.text();
+        this.styles.textContent = css;
     }
 }
-// change this depending on where the css files are located
-WebComponent.constants = {
-    CSS_PATH: "js/components/components-css",
-};
 export default WebComponent;

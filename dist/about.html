@@ -31,7 +31,16 @@
     <meta name="twitter:title" content="Aadil Mallick | Web Developer" />
     <meta name="twitter:description" content="Hi, I'm Aadil Mallick. Programmer, Web Developer, Web Designer, ML Engineer, and more." />
     <meta name="twitter:image" content="https://i.postimg.cc/65MbpVJr/aadilbrickbg.jpg" />
-
+    <script type="speculationrules">
+      {
+        "prerender": [
+          {
+            "where": { "href_matches": "/*.html" },
+            "eagerness": "eager"
+          }
+        ]
+      }
+    </script>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
@@ -49,10 +58,11 @@
     <link rel="stylesheet" href="css/main.css" />
 
     <!-- js -->
+    <script src="./js/components/PageLoader.js" type="module"></script>
     <script src="./js/components/navbar.js" type="module"></script>
-
   </head>
   <body>
+    <page-loader data-fade-out-time="500"></page-loader>
     <nav-bar></nav-bar>
 
     <section id="about-a" class="text-center">

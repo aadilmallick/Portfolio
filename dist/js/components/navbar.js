@@ -1,21 +1,6 @@
 import WebComponent from "./WebComponent.js";
 class Navbar extends WebComponent {
-    constructor() {
-        super({
-            cssFileName: "navbar.css",
-            HTMLContent: Navbar.content,
-            templateId: "navbar-template",
-        });
-        this.linkList = this.$("#link-list");
-        const filename = window.location.pathname.split("/").pop();
-        if (filename) {
-            const links = Array.from(this.linkList.querySelectorAll("a"));
-            const currentLink = links.find((link) => link.getAttribute("href") === filename);
-            currentLink === null || currentLink === void 0 ? void 0 : currentLink.classList.add("current");
-        }
-    }
-}
-Navbar.content = `
+    static content = `
     <header id="header-home" class="header-inner">
       <div class="container">
         <nav id="main-nav">
@@ -32,5 +17,21 @@ Navbar.content = `
       </div>
     </header>
   `;
+    linkList;
+    constructor() {
+        super({
+            cssFileName: "navbar.css",
+            HTMLContent: Navbar.content,
+            templateId: "navbar-template",
+        });
+        this.linkList = this.$("#link-list");
+        const filename = window.location.pathname.split("/").pop();
+        if (filename) {
+            const links = Array.from(this.linkList.querySelectorAll("a"));
+            const currentLink = links.find((link) => link.getAttribute("href") === filename);
+            currentLink?.classList.add("current");
+        }
+    }
+}
 export default Navbar;
 customElements.define("nav-bar", Navbar);
