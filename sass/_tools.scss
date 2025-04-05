@@ -1,0 +1,54 @@
+@import "variables";
+@import "utilities";
+@import "mixins";
+
+h1 {
+  text-align: center;
+  background: linear-gradient(to right, $primary-color, rgb(47, 199, 219));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 450px));
+  gap: 2rem;
+  padding: 0.5rem;
+  width: clamp(300px, 100%, 1200px);
+  margin: 2rem auto;
+  justify-content: center;
+
+  article.tool {
+    background-color: hsl(0, 0%, 98%);
+    border: 2px solid hsl(0, 0%, 90%);
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0.5rem;
+
+    h3 {
+      border-bottom: 2px solid $primary-color;
+      padding-bottom: 4px;
+      margin-bottom: 1rem;
+      background: linear-gradient(
+        to right,
+        hsl(187, 70%, 22%),
+        $primary-color,
+        rgb(47, 199, 219)
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .links {
+      display: flex;
+      justify-content: start;
+      padding: 0.5rem 0;
+      gap: 1rem;
+      align-items: center;
+      a {
+        color: $primary-color;
+        font-weight: 600;
+      }
+    }
+  }
+}

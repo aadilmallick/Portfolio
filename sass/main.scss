@@ -7,6 +7,11 @@
   padding: 0;
 }
 
+code {
+  background-color: rgb(185, 185, 185);
+  color: hsl(0, 75%, 50%);
+}
+
 body {
   font-family: "Dosis", sans-serif;
   line-height: 1.5;
@@ -227,3 +232,4 @@ img {
 @import "work";
 @import "contact";
 @import "responsive";
+@import "tools";

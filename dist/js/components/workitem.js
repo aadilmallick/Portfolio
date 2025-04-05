@@ -37,7 +37,7 @@ class SeeLinkHandler extends DatasetHandler {
         this.element.href = dataAttrValue;
     }
 }
-class WorkItem extends WebComponent {
+export default class WorkItem extends WebComponent {
     static content = `
     <div class="item">
         <div class="item-caption">
@@ -92,5 +92,4 @@ class WorkItem extends WebComponent {
         }
     }
 }
-export default WorkItem;
 customElements.define("work-item", WorkItem);

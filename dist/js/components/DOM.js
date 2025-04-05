@@ -1,4 +1,4 @@
-class DOM {
+export class DOM {
     static createDomElement(html) {
         const dom = new DOMParser().parseFromString(html, "text/html");
         return dom.body.firstElementChild;
@@ -18,7 +18,6 @@ class DOM {
         container.appendChild(fragment);
     }
 }
-export { DOM };
 export function html(strings, ...values) {
     let str = "";
     strings.forEach((string, i) => {

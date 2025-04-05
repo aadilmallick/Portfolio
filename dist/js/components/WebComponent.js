@@ -1,4 +1,4 @@
-class WebComponent extends HTMLElement {
+export default class WebComponent extends HTMLElement {
     shadow;
     styles;
     template;
@@ -51,4 +51,3 @@ class WebComponent extends HTMLElement {
         this.styles.textContent = css;
     }
 }
-export default WebComponent;

@@ -88,6 +88,11 @@
   padding: 0;
 }
 
+code {
+  background-color: rgb(185, 185, 185);
+  color: hsl(0, 75%, 50%);
+}
+
 body {
   font-family: "Dosis", sans-serif;
   line-height: 1.5;
@@ -952,6 +957,133 @@ img {
     display: block;
     margin: 0 auto;
   }
+}
+.container {
+  max-width: 1280px;
+  padding: 0 2rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 2rem;
+  transition: all 0.5s;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.btn:hover {
+  background-color: #ffbc00;
+}
+.btn-primary {
+  color: #333;
+  background-color: #ffbc00;
+}
+.btn-light {
+  color: #333;
+  background-color: #f4f4f4;
+}
+.btn-dark {
+  color: #f4f4f4;
+  background-color: #333;
+}
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: #ffbc00;
+}
+
+.section-title {
+  font-size: 2rem;
+  display: block;
+  padding-bottom: 0.5rem;
+  font-weight: 100;
+}
+
+.tg-red-orange, #main-footer p {
+  background: #ffbc00;
+  background: linear-gradient(to right, #ffbc00 0%, #cf1512 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.tg-rainbow {
+  background: violet;
+  background: linear-gradient(to right, #ee82ee, #4b0082, #0000ff, #008000, #ffa500, #ffff00, #ff0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.tg-rainbow-harsh {
+  background: #ee82ee;
+  background: linear-gradient(to right, #ee82ee 0%, #4b0082 17%, #0000ff 34%, #008000 51%, #ffa500 68%, #ffff00 85%, #ff0000 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gradient-rainbow, #about-b .progress-1, #about-b .progress-2, #about-b .progress-3, #about-b .progress-4, #about-b .progress-5, #about-b .progress-6 {
+  background: violet;
+  background: linear-gradient(to right, #ee82ee, #4b0082, #0000ff, #008000, #ffa500, #ffff00, #ff0000);
+}
+
+.divider-sm {
+  border-bottom: 3px solid #ffbc00;
+  margin: 0.3rem auto;
+  margin-bottom: 0.75rem;
+  width: 10%;
+}
+.divider-thin {
+  border-bottom: 1px solid #f4f4f4;
+}
+
+h1 {
+  text-align: center;
+  background: linear-gradient(to right, #ffbc00, rgb(47, 199, 219));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 450px));
+  gap: 2rem;
+  padding: 0.5rem;
+  width: clamp(300px, 100%, 1200px);
+  margin: 2rem auto;
+  justify-content: center;
+}
+.tools-grid article.tool {
+  background-color: hsl(0, 0%, 98%);
+  border: 2px solid hsl(0, 0%, 90%);
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0.5rem;
+}
+.tools-grid article.tool h3 {
+  border-bottom: 2px solid #ffbc00;
+  padding-bottom: 4px;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, hsl(187, 70%, 22%), #ffbc00, rgb(47, 199, 219));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.tools-grid article.tool .links {
+  display: flex;
+  justify-content: start;
+  padding: 0.5rem 0;
+  gap: 1rem;
+  align-items: center;
+}
+.tools-grid article.tool .links a {
+  color: #ffbc00;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=main.css.map */
