@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Expert React 3-in-1 Developer Bundle 2025: Become a Reactjs expert!",
+    "price": "$5.99",
+    "link": "https://buy.polar.sh/polar_cl_9zKs61FEkIsiP7mYzCfhmW3TytsvgsAykjSED4S2BdV",
+    "description": "Three comprehensive React courses bundled with hands-on projects and examples to take you from fundamentals to advanced, production-ready React development.",
+    "id": "react-bundle-notebook"
+  },
+  {
+    "title": "Learn Advanced React: Online Coding Notebook",
+    "price": "$3.99",
+    "link": "https://buy.polar.sh/polar_cl_kRTUNkgoPjcnLj7QiJEcTug1gPHFnU7tLwhhQ2766aE",
+    "description": "A focused advanced React notebook with practical patterns, hooks, and architecture tips to build scalable, high-performance components and apps.",
+    "id": "react-advanced-notebook"
+  },
+  {
+    "title": "Learn React + Firebase + Redux: Intermediate React Coding Notebook",
+    "price": "$3.99",
+    "link": "https://buy.polar.sh/polar_cl_Zlt56G1uQG6CDnpFd1C1kMwYUaFqmFuKxpSRU2S7oGM",
+    "description": "Hands-on intermediate projects showing how to integrate React with Firebase backends and Redux state management to build authenticated, data-driven applications.",
+    "id": "react-intermediate-notebook"
+  },
+  {
+    "title": "Learn React.js Basics - Complete Coding Notebook",
+    "price": "$3.99",
+    "link": "https://buy.polar.sh/polar_cl_jIH2MPw7VlVfdfmbYQ38qAbnl2KOPJ0RhXRbA0R2YjU",
+    "description": "A complete beginner-friendly React notebook covering components, props, state, and basic app structure with runnable examples and exercises.",
+    "id": "react-basics-notebook"
+  },
+  {
+    "title": "Learn TypeScript Fundamentals: Comprehensive Coding Notebook",
+    "price": "$3.99",
+    "link": "https://buy.polar.sh/polar_cl_yLkjZffOJ0rLN9COeQnT3QB0eeEVYZXs72ads1LAMqv",
+    "description": "Introductory TypeScript lessons with examples and exercises to help you add static types, catch errors early, and write more maintainable JavaScript code.",
+    "id": "ts-coding-notebook"
+  },
+  {
+    "title": "Master JavaScript 2024: 2 Coding Notebooks",
+    "price": "$3.99",
+    "link": "https://buy.polar.sh/polar_cl_yHMThEl9rQTh2WcLsrq4ZMlQlqiS3NebGdOrl3wUxKS",
+    "description": "Two concise notebooks covering modern JavaScript features, best practices, and practical exercises to sharpen your JS knowledge for 2024.",
+    "id": "javascript-coding-notebook"
+  },
+  {
+    "title": "NodeJS Mastery 2024 - 3 Digital Coding Notebooks",
+    "price": "$4.99",
+    "link": "https://buy.polar.sh/polar_cl_2S7EC46RUXQEvTQ9zRbvn4DafUI1RQloY30Yi3LL8Z1",
+    "description": "Three hands-on Node.js notebooks teaching server-side JavaScript, API development, and deployment workflows to build reliable backend services.",
+    "id": "node-js-notebook"
+  },
+  {
+    "title": "TensorFlow 2 Mastery - 1 Jupyter/Colab Python Coding Notebook",
+    "price": "$3.99",
+    "link": "https://buy.polar.sh/polar_cl_LlxybsNNfE7BOni3yONuzR6oxnY8vfE1oMdaJ4606q7",
+    "description": "A runnable Jupyter/Colab notebook that teaches TensorFlow 2 fundamentals with example models and exercises for building and training neural networks.",
+    "id": "tensorflow-coding-python-notebook"
+  }
+]

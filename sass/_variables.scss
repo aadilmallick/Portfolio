@@ -2,11 +2,12 @@ $website-width: 1280px;
 $primary-color: #ffbc00;
 $light-color: #f4f4f4;
 $dark-color: #333;
-$medium-color: #ccc;
+$medium-color: hsl(0, 0%, 70%);
 $primary-fade: rgba(255, 188, 0, 0.4);
 
 // images
 $bg-image: url("../images/myimages/aadilstanding.jpg");
+$bg-image-min: url("../images/myimages/aadilstandingavifmin.avif");
 $overlay-light: linear-gradient(
   to bottom,
   rgba(0, 0, 0, 0.3),

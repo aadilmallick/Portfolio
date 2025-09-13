@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aadil Mallick | Products</title>
+    <!-- meta tags -->
+
+    <meta
+      name="description"
+      content="Aadil Mallick's Shop: Digital coding notebooks and resources for React.js, TypeScript, JavaScript, Node.js, and TensorFlow. Expert developer tutorials and guides."
+    />
+    <meta name="keywords" content="Aadil Mallick, Aadil, Web Developer" />
+    <meta name="author" content="Aadil Mallick" />
+    <meta property="og:title" content="Aadil Mallick | Portfolio work" />
+    <meta
+      property="og:description"
+      content="Hi, I'm Aadil Mallick. This is my portfolio. Web Developer, Web Designer, ML Engineer, and more."
+    />
+    <meta
+      property="og:image"
+      content="https://i.postimg.cc/65MbpVJr/aadilbrickbg.jpg"
+    />
+    <meta property="og:url" content="https://aadilmallick.com/work.html" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@username" />
+    <meta name="twitter:title" content="Aadil Mallick | Web Developer" />
+    <meta
+      name="twitter:description"
+      content="Hi, I'm Aadil Mallick. Programmer, Web Developer, Web Designer, ML Engineer, and more."
+    />
+    <meta
+      name="twitter:image"
+      content="https://i.postimg.cc/65MbpVJr/aadilbrickbg.jpg"
+    />
+
+    <script type="speculationrules">
+      {
+        "prerender": [
+          {
+            "where": { "href_matches": "/*.html" },
+            "eagerness": "eager"
+          }
+        ]
+      }
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="shortcut icon" type="image/x-icon" href="faviconaadil.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- js -->
+    <script src="./js/components/PageLoader.js" type="module"></script>
+    <script src="./js/components/navbar.js" type="module"></script>
+    <script src="./js/components/workitem.js" type="module" defer></script>
+    <script src="./js/product.js" type="module"></script>
+  <script src="./js/tilt.js" type="module" defer></script>
+  </head>
+  <body>
+    <page-loader data-fade-out-time="750"></page-loader>
+    <nav-bar></nav-bar>
+
+    <section id="products" class="text-center">
+      <div class="container">
+        <h2 class="section-title">My Products</h2>
+        <div class="divider-sm"></div>
+        <div id="products-container" class="products-grid"></div>
+      </div>
+    </section>
+       <footer id="main-footer">
+      <div class="footer-content container">
+        <p>Copyright &copy; 2022. All Rights Reserved</p>
+        <div class="social">
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-youtube"></i>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>

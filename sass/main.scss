@@ -40,7 +40,7 @@ img {
 // header
 
 #header-home {
-  background: $overlay-light, $bg-image no-repeat center right / cover;
+  background: $overlay-light, $bg-image-min no-repeat center right / cover;
   height: 100vh;
   color: white;
 
@@ -233,3 +233,83 @@ img {
 @import "contact";
 @import "responsive";
 @import "tools";
+/* Featured products split layout */
+#featured-products-section {
+  @include py(2);
+  .featured-split-list {
+    display: grid;
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  .fp-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+    background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(245,245,245,0.9));
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(10,10,10,0.06);
+
+    &.reverse {
+      direction: rtl;
+    }
+  }
+
+  .fp-media img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .fp-content {
+    direction: ltr; /* keep text normal when parent is rtl */
+  }
+
+  .fp-title {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: $dark-color;
+  }
+
+  .fp-price {
+    color: $primary-color;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+
+  .fp-desc {
+    color: $medium-color;
+    margin-bottom: 1rem;
+  }
+
+  .fp-cta {
+    display: inline-block;
+    background: $primary-color;
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    transition: transform 0.18s cubic-bezier(.2,.9,.2,1), box-shadow 0.18s ease;
+    will-change: transform;
+
+    &:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 12px 28px rgba(2,34,63,0.12);
+      background: darken($primary-color, 6%);
+    }
+  }
+
+  @media (max-width: 900px) {
+    .fp-split {
+      grid-template-columns: 1fr;
+      &.reverse { direction: ltr; }
+    }
+
+    .fp-media img { height: 220px; }
+  }
+}
+@import "product";
