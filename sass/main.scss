@@ -309,7 +309,9 @@ img {
       &.reverse { direction: ltr; }
     }
 
-    .fp-media img { height: 220px; }
+    .fp-media img { 
+      aspect-ratio: 16 / 9;
+     }
   }
 }
 @import "product";

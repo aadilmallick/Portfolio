@@ -7,7 +7,8 @@ import { initTilt } from "./tilt.js";
  */
 async function fetchNotebooks() {
   try {
-    const response = await fetch('/dist/json/notebook-products.json');
+  const jsonUrl = new URL('../json/notebook-products.json', import.meta.url).href;
+  const response = await fetch(jsonUrl);
     if (!response.ok) {
       throw new Error('Failed to fetch products');
     }
@@ -37,10 +38,11 @@ async function fetchNotebooks() {
  * @returns {HTMLElement} The card element.
  */
 function createProductCard(product) {
+  const imageUrl = new URL(`../images/products/${product.id}.jpg`, import.meta.url).href;
     const cardHtml = html`
         <div class="fp-split">
           <div class="fp-media">
-            <img src="/dist/images/products/${product.id}.jpg" alt="${product.title}" />
+            <img src="${imageUrl}" alt="${product.title}" />
           </div>
           <div class="fp-content">
             <h3 class="fp-title">${product.title}</h3>
