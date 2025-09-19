@@ -6,17 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Aadil Mallick Portfolio: Hi, I'm Aadil, a graduate of TJ and a programmer."
+      content="Hi, I'm Aadil, a graduate of TJ and a double major in Computer Science and Math at W&M. I'm a fullstack web developer and AI/ML engineer."
     />
-    <meta name="keywords" content="Aadil Mallick, Aadil, Web Developer" />
+    <meta
+      name="keywords"
+      content="Aadil Mallick, Aadil, Web Developer, fullstack, AI/ML, AI, ML"
+    />
     <meta name="author" content="Aadil Mallick" />
     <meta
       property="og:title"
-      content="Aadil Mallick | Web Developer Portfolio"
+      content="Aadil Mallick | Fullstack + AI/ML Portfolio"
     />
     <meta
       property="og:description"
-      content="Hi, I'm Aadil Mallick. Programmer, Web Developer, Web Designer, ML Engineer, and more."
+      content="Hi, I'm Aadil, a graduate of TJ and a double major in Computer Science and Math at W&M. I'm a fullstack web developer and AI/ML engineer."
     />
     <meta
       property="og:image"
@@ -26,16 +29,19 @@
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@username" />
-    <meta name="twitter:title" content="Aadil Mallick | Web Developer" />
+    <meta
+      name="twitter:title"
+      content="Aadil Mallick | Fullstack + AI/ML Portfolio"
+    />
     <meta
       name="twitter:description"
-      content="Hi, I'm Aadil Mallick. Programmer, Web Developer, Web Designer, ML Engineer, and more."
+      content="Hi, I'm Aadil, a graduate of TJ and a double major in Computer Science and Math at W&M. I'm a fullstack web developer and AI/ML engineer."
     />
     <meta
       name="twitter:image"
       content="https://i.postimg.cc/65MbpVJr/aadilbrickbg.jpg"
     />
-    <title>Aadil Mallick | Web Developer</title>
+    <title>Aadil Mallick | Fullstack + AI/ML Portfolio</title>
 
     <script type="speculationrules">
       {
@@ -44,6 +50,20 @@
             "where": { "href_matches": "/*.html" },
             "eagerness": "eager"
           }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Aadil Mallick",
+        "jobTitle": "Fullstack Web Developer and AI/ML Engineer",
+        "url": "https://aadilmallick.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/aadil-mallick",
+          "https://github.com/aadilmallick",
+          "https://medium.com/@waadlingaadil"
         ]
       }
     </script>
@@ -68,14 +88,21 @@
     <!-- js -->
     <script src="./js/components/navbar.js" type="module"></script>
     <script src="js/typewriter.js" defer></script>
-  <script src="./js/featuredproducts.js" type="module" defer></script>
-  <script src="./js/tilt.js" type="module" defer></script>
+    <script src="./js/featuredproducts.js" type="module" defer></script>
+    <script src="./js/tilt.js" type="module" defer></script>
   </head>
   <body>
     <header id="header-home">
       <div class="container">
         <nav id="main-nav">
-          <img src="images/logo-white.png" alt="my portfolio" class="logo" />
+          <img
+            src="images/logo-white.png"
+            alt="my portfolio"
+            class="logo"
+            width="125"
+            height="125"
+            fetchpriority="high"
+          />
           <ul class="nav-links">
             <li><a href="index.html" class="current">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -105,11 +132,17 @@
             <span
               class="txt-type"
               data-wait="3000"
-              data-words='["Web Developer", "Musician", "ML Engineer", "Game Dev", "Web Designer"]'
+              data-words='["Fullstack Web Dev", "AI/ML Engineer"]'
             ></span>
           </h1>
-          <p class="lead">
-            I specialize in web development, front-end, back-end, and web design
+          <p
+            class="lead"
+            style="
+              font-weight: bold;
+              text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+            "
+          >
+            I specialize in fullstack web development and AI/ML engineering.
           </p>
           <a href="work.html" class="btn btn-light">My Work</a>
         </div>
@@ -117,10 +150,65 @@
     </header>
     <section id="home-a" class="text-center">
       <div class="container">
-        <h2 class="section-title">I Specialize In</h2>
+        <h2 class="section-title">Machine Learning Skills</h2>
         <div class="divider-sm"></div>
-        <p class="lead tg-rainbow-harsh">
-          Front-end web development and Back-end web development
+        <p class="lead tg-primary" style="max-width: 45ch; margin: 1rem auto">
+          My ML philosophy is to deeply understand the calculus, statistics, and
+          linear algebra behind each model I use. I try to first build them from
+          scratch, and then I use the latest modern libraries to create a robust
+          solution.
+        </p>
+        <div class="specials">
+          <div>
+            <i class="fas fa-brain fa-2x"></i>
+            <h3>TensorFlow & Pytorch</h3>
+            <p>
+              I learned the math and intutition behind neural networks from
+              Andrew Ng's Deep Learning Specialization on Coursera. Then I built
+              what I learned about. Tensorflow and Pytorch help me achieve me
+              craft deep learning architectures like GANs, VAEs, CNNs, and
+              Transformers.
+            </p>
+          </div>
+
+          <div>
+            <i class="fas fa-cogs fa-2x"></i>
+            <h3>scikit-learn & Classical ML</h3>
+            <p>
+              I learned the holy trinity of Numpy + Pandas + Matplotlib. Then I
+              mastered scikit-learn, diving deep into techniques like feature
+              engineering, classification metrics, grid search, SVMs, decision
+              trees, ensemble methods, gradient boosting, and more.
+            </p>
+          </div>
+
+          <div>
+            <i class="fas fa-calculator fa-2x"></i>
+            <h3>Math & Algorithms</h3>
+            <p>
+              Strong foundations in linear algebra, probability, optimization,
+              and numerical methods that drive reliable model design and
+              interpretation.
+            </p>
+          </div>
+
+          <div>
+            <i class="fas fa-robot fa-2x"></i>
+            <h3>AI Engineering & LLMs</h3>
+            <p>
+              As an early AI adopter since 2023, I build LLM-powered products
+              with prompt engineering, RAG, tool calls, and powerups such as
+              Gemini CLI, Cursor, Coderabbit, and Claude Code.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container" style="margin-top: 10rem">
+        <h2 class="section-title">Web Dev Skills</h2>
+        <div class="divider-sm"></div>
+        <p class="lead tg-primary" style="max-width: 45ch; margin: 1rem auto">
+          I'm a fullstack web dev who's not afraid of the hard stuff - Docker,
+          Linux, Flexbox, Grid, Github Actions, PostgreSQL, and more.
         </p>
         <div class="specials">
           <div>
@@ -144,8 +232,8 @@
             <h3>HTML and CSS</h3>
             <p>
               Using my web design knowledge, I transfer my mockups from Figma to
-              HTML and CSS. I use SASS and sometimes Bootstrap to maintain a
-              cleaner, more powerful codebase.
+              HTML and CSS. I use SASS, Tailwind, and ShadCN as my CSS powerups
+              of choice.
             </p>
           </div>
           <div>
@@ -160,10 +248,81 @@
         </div>
       </div>
     </section>
+    <section id="featured-articles-section" class="text-center">
+      <div class="container">
+        <h2 class="section-title">Featured Articles</h2>
+        <div class="divider-sm"></div>
+        <p class="lead">
+          I follow Feynman to the core - you don't truly know something unless
+          you can teach it to someone else. So here it is: complete AI/ML guides
+        </p>
+        <div class="fa-list container">
+          <article class="fa-card">
+            <div class="fa-media">
+              <img
+                src="images/articles/learn-neural-network.jpg"
+                alt="Learn to build a neural network"
+                width="600"
+                height="360"
+              />
+            </div>
+            <div class="fa-content">
+              <h3 class="fa-title">
+                Learn to build a neural network from scratch — yes, really
+              </h3>
+              <p class="fa-excerpt">
+                A step-by-step walkthrough building a neural network from first
+                principles, covering forward/backward pass, loss, and training.
+              </p>
+              <a
+                class="fa-button"
+                href="https://medium.com/@waadlingaadil/learn-to-build-a-neural-network-from-scratch-yes-really-cac4ca457efc"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Read on Medium</a
+              >
+            </div>
+          </article>
+
+          <article class="fa-card fa-alt">
+            <div class="fa-media">
+              <img
+                src="images/articles/free-coding-superpowers.jpg"
+                alt="Free coding superpowers with Jules"
+                width="600"
+                height="360"
+              />
+            </div>
+            <div class="fa-content">
+              <h3 class="fa-title">
+                Free coding superpowers with Jules — Google's async agent
+              </h3>
+              <p class="fa-excerpt">
+                Exploring Jules, Google's async agent system, and how it can
+                augment coding workflows and automate repetitive developer
+                tasks.
+              </p>
+              <a
+                class="fa-button"
+                href="https://medium.com/javascript-in-plain-english/free-coding-superpowers-with-jules-googles-async-agent-a367430bfc39"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Read on Medium</a
+              >
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section id="featured-products-section" class="text-center">
       <div class="container">
         <h2 class="section-title">Featured Notebooks</h2>
         <div class="divider-sm"></div>
+        <p class="lead">
+          Learn from my years of knowledge, all compiled into these
+          Jupyter/Colab notebooks.
+        </p>
         <div id="featured-products" class="featured-split-list"></div>
       </div>
     </section>

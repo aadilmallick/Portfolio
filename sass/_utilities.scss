@@ -60,6 +60,12 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  &-primary {
+    background: $primary-color;
+    background: linear-gradient(to right, #ffbc00 0%, darken(#ffbc00, 20%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   &-rainbow {
     background: violet;
     background: linear-gradient(
