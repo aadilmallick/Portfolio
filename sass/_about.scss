@@ -34,6 +34,7 @@
     .bio-image {
       grid-area: bioimage;
       transition: all $transition-slow;
+      border-radius: 8px;
       &:hover {
         border-radius: 50%;
       }
@@ -44,6 +45,8 @@
       padding: 1rem;
       border-left: 3px solid $primary-color;
       background-color: $light-color;
+      text-align: left;
+
       h1,
       h2,
       h3,
@@ -58,8 +61,99 @@
       h2 {
         font-weight: 100;
         @include py(0.5);
+        padding-left: 0.5rem;
         @include my(1);
         background-color: $primary-fade;
+      }
+
+      // GitHub journey specific styling
+      h2:contains("GitHub Evolution") {
+        background: linear-gradient(
+          135deg,
+          $primary-color,
+          lighten($primary-color, 20%)
+        );
+        color: white;
+        border-radius: 8px;
+        margin-top: 2rem;
+      }
+
+      strong {
+        color: darken($primary-color, 10%);
+        font-weight: 600;
+      }
+
+      code {
+        background-color: rgba(255, 188, 0, 0.1);
+        color: darken($primary-color, 20%);
+        padding: 0.2rem 0.4rem;
+        border-radius: 4px;
+        font-family: "Courier New", monospace;
+      }
+
+      // Coursework styling
+      .coursework-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-top: 1.5rem;
+
+        @media (max-width: 768px) {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+      }
+
+      .course-category {
+        background: rgba(255, 255, 255, 0.7);
+        padding: 1.5rem;
+        border-radius: 12px;
+        border-left: 4px solid $primary-color;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+        h3 {
+          color: $dark-color;
+          font-size: 1.3rem;
+          margin-bottom: 1rem;
+          padding-bottom: 0.5rem;
+          border-bottom: 2px solid rgba(255, 188, 0, 0.2);
+        }
+
+        @media (max-width: 600px) {
+          padding: 0.25rem;
+        }
+      }
+
+      .course-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          margin-bottom: 1rem;
+          padding: 0.75rem;
+          background: rgba(255, 255, 255, 0.8);
+          border-radius: 8px;
+          border-left: 3px solid rgba(255, 188, 0, 0.3);
+          transition: all 0.2s ease;
+
+          &:hover {
+            border-left-color: $primary-color;
+            background: rgba(255, 255, 255, 0.95);
+            transform: translateX(2px);
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          strong {
+            color: $dark-color;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.3rem;
+          }
+        }
       }
     }
 
@@ -96,46 +190,65 @@
     }
   }
   &-b {
-    background-color: $dark-color;
-    color: white;
-    @include py(3);
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    color: $dark-color;
+    @include py(4);
 
-    .progress {
-      overflow: hidden;
-      height: 20px;
-      background-color: $medium-color;
-      border-radius: 5px;
-      margin-bottom: 1rem;
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
 
-      &-1 {
-        @include progressbar(40);
-        height: 100%;
-        @extend .bg-gradient-rainbow;
+    .experience-item {
+      background: white;
+      padding: 2rem 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(255, 188, 0, 0.1);
+
+      .tech-icon {
+        font-size: 3rem;
+        color: $medium-color;
+        margin-bottom: 1rem;
+        display: block;
       }
-      &-2 {
-        @include progressbar(250);
-        height: 100%;
-        @extend .bg-gradient-rainbow;
+
+      h3 {
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+        color: $dark-color;
+        font-weight: 600;
       }
-      &-3 {
-        @include progressbar(80);
-        height: 100%;
-        @extend .bg-gradient-rainbow;
+
+      .experience-years {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: $medium-color;
       }
-      &-4 {
-        @include progressbar(220);
-        height: 100%;
-        @extend .bg-gradient-rainbow;
+    }
+
+    @media (max-width: 768px) {
+      .experience-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
       }
-      &-5 {
-        @include progressbar(100);
-        height: 100%;
-        @extend .bg-gradient-rainbow;
-      }
-      &-6 {
-        @include progressbar(70);
-        height: 100%;
-        @extend .bg-gradient-rainbow;
+
+      .experience-item {
+        padding: 1.5rem 1rem;
+
+        .tech-icon {
+          font-size: 2.5rem;
+        }
+
+        h3 {
+          font-size: 1.2rem;
+        }
+
+        .experience-years {
+          font-size: 1.5rem;
+        }
       }
     }
   }
@@ -156,6 +269,11 @@
         &:nth-child(3n + 1) {
           background-color: $primary-color;
         }
+      }
+
+      span {
+        display: block;
+        font-weight: 600;
       }
     }
   }

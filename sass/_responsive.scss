@@ -8,6 +8,10 @@
       gap: 2rem;
     }
   }
+
+  .specials {
+    grid-template-columns: 2fr;
+  }
 }
 
 @media (max-width: 800px) {
@@ -26,9 +30,23 @@
       height: 100%;
     }
   }
+
+  #about-a {
+    .about-info {
+      grid-template-areas:
+        "bio-image"
+        "bio"
+        "award1"
+        "award2"
+        "award3";
+      .bio-image {
+        grid-area: bio-image;
+      }
+    }
+  }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   #header-home {
     .header-content {
       padding-top: 1.5rem;

@@ -62,7 +62,11 @@
   }
   &-primary {
     background: $primary-color;
-    background: linear-gradient(to right, #ffbc00 0%, darken(#ffbc00, 20%) 100%);
+    background: linear-gradient(
+      to right,
+      #ffbc00 0%,
+      darken(#ffbc00, 20%) 100%
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -113,6 +117,136 @@
     );
   }
 }
+
+// keyframes animations
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+// glow effects
+.glow {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 8px;
+  }
+
+  &::before {
+    filter: blur(1rem);
+    opacity: 0.5;
+    animation: pulse 3s linear infinite;
+  }
+
+  &-primary {
+    &::before,
+    &::after {
+      background-image: conic-gradient(
+        from 0deg,
+        $primary-color,
+        lighten($primary-color, 20%),
+        $primary-color,
+        darken($primary-color, 10%),
+        $primary-color
+      );
+    }
+  }
+
+  &-primary-animated {
+    &::before,
+    &::after {
+      background-image: conic-gradient(
+        from 0deg,
+        $primary-color,
+        lighten($primary-color, 20%),
+        darken($primary-color, 10%),
+        $primary-color
+      );
+      animation: glow-spin 3s linear infinite;
+    }
+  }
+
+  &-rainbow {
+    &::before,
+    &::after {
+      background-image: conic-gradient(
+        from 0deg,
+        #ff4545,
+        #ff0095,
+        #006aff,
+        #00ff99,
+        #ff4545
+      );
+    }
+  }
+
+  &-rainbow-animated {
+    &::before,
+    &::after {
+      background-image: conic-gradient(
+        from 0deg,
+        #ff4545,
+        #ff0095,
+        #006aff,
+        #00ff99,
+        #ff4545
+      );
+      animation: glow-spin 3s linear infinite;
+    }
+  }
+
+  &-blue-purple {
+    &::before,
+    &::after {
+      background-image: conic-gradient(
+        from 0deg,
+        #006aff,
+        #8b5cf6,
+        #ec4899,
+        #006aff
+      );
+    }
+  }
+
+  &-blue-purple-animated {
+    &::before,
+    &::after {
+      background-image: conic-gradient(
+        from 0deg,
+        #006aff,
+        #8b5cf6,
+        #ec4899,
+        #006aff
+      );
+      animation: glow-spin 3s linear infinite;
+    }
+  }
+}
+
+@keyframes glow-spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
 // other
 .divider {
   &-sm {

@@ -1,0 +1,42 @@
+{
+  "projects": [
+    {
+      "name": "Key Stash Manager",
+      "description": "A secure, fully frontend API key manager based on local storage, and is able to be self-hosted as well via Docker. You can export/import env files, export/import entire profiles and folders, and more.",
+      "image": {
+        "url": "/images/mywork/keystashmanagercover.webp",
+        "alt": "Key Stash Manager"
+      },
+      "links": {
+        "demo": "https://keystashmanager.netlify.app/",
+        "github": "https://github.com/aadilmallick/key-stash-manager"
+      }
+    },
+    {
+      "name": "Youtube Bookmarker",
+      "description": "A chrome extension that allows you to bookmark timestamps and notes on your favorite youtube videos. Also has cloud sync via github gists and allows you to export/import your bookmarks.",
+      "image": {
+        "url": "/images/mywork/youtube_bookmarker.png",
+        "alt": "Youtube Bookmarker"
+      },
+      "links": {
+        "demo": "https://www.youtube.com/watch?v=mEuwL5A6wDA&feature=youtu.be",
+        "github": "https://github.com/aadilmallick/youtube-bookmarker",
+        "download": "https://chromewebstore.google.com/detail/youtube-bookmarker/afkamhoafddblohdfjldodabchpgfofg"
+      }
+    },
+    {
+      "name": "Loolite",
+      "description": "A chrome extension loom clone that allows users to record their screen and camera and download the webm recording for free.",
+      "image": {
+        "url": "https://lh3.googleusercontent.com/_YO5ksnMyxM41SGh3u2H0RNPBKmjmc6P73xG3B_TNMICX7PiIAPDhvzbVua05Ta9CdRxIz1x7sI3EXRQO0iw4mdQyA=s1280-w1280-h800",
+        "alt": "Loolite"
+      },
+      "links": {
+        "demo": "https://chromewebstore.google.com/detail/loolite/igegmcgjejildeifkifnbgkiafpjmkhg",
+        "github": "https://github.com/aadilmallick/loolite",
+        "download": "https://loolite.netlify.app/"
+      }
+    }
+  ]
+}
