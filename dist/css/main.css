@@ -1964,6 +1964,15 @@ h1 {
   border-bottom: 1px solid #f4f4f4;
 }
 
+.products-intro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  max-width: 800px;
+  margin: 1.5rem auto 2rem;
+  padding: 0 1rem;
+}
+
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -2054,5 +2063,3 @@ h1 {
   font-size: 1.25rem;
   margin-top: 2rem;
 }
-
-/*# sourceMappingURL=main.css.map */
