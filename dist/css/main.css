@@ -330,6 +330,14 @@ img {
   background-color: #333;
 }
 
+.linkedin-badge-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  background-color: transparent;
+}
+
 #main-footer {
   background-color: #333;
   color: white;
@@ -2063,3 +2071,5 @@ h1 {
   font-size: 1.25rem;
   margin-top: 2rem;
 }
+
+/*# sourceMappingURL=main.css.map */
