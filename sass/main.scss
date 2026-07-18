@@ -209,6 +209,14 @@ img {
   }
 }
 
+.linkedin-badge-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  background-color: transparent;
+}
+
 #main-footer {
   background-color: $dark-color;
   color: white;
