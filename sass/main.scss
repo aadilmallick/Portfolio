@@ -210,11 +210,112 @@ img {
 }
 
 .linkedin-badge-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
   justify-content: center;
+  justify-items: center;
   align-items: center;
-  padding: 2rem 0;
+  gap: 2rem;
+  padding: 2rem 1rem;
   background-color: transparent;
+  max-width: $website-width;
+  margin: 0 auto;
+
+  .scholar-card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    width: 250px;
+    height: 285px; /* Matches height of LinkedIn medium card */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform $transition-fast, box-shadow $transition-fast;
+    text-decoration: none;
+    color: #333333;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .scholar-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      border-bottom: 1px solid #eeeeee;
+      padding-bottom: 0.75rem;
+
+      .scholar-icon {
+        color: #4285F4;
+        font-size: 2rem;
+      }
+
+      .scholar-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        text-transform: none;
+        color: #4285F4;
+        margin: 0;
+        letter-spacing: 0.5px;
+      }
+    }
+
+    .scholar-body {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0.75rem 0;
+
+      .scholar-avatar {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: #f1f3f4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0.5rem;
+        border: 2px solid #4285F4;
+        color: #4285F4;
+        font-size: 1.5rem;
+      }
+
+      .scholar-name {
+        font-size: 1.15rem;
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+        color: #333333;
+      }
+
+      .scholar-institution {
+        font-size: 0.85rem;
+        color: #666666;
+        line-height: 1.2;
+      }
+    }
+
+    .scholar-footer {
+      background-color: #4285F4;
+      color: #ffffff;
+      text-align: center;
+      padding: 0.5rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: background-color $transition-fast;
+
+      &:hover {
+        background-color: darken(#4285F4, 10%);
+      }
+    }
+  }
 }
 
 #main-footer {
