@@ -48,6 +48,10 @@ h1 {
       a {
         color: $primary-color;
         font-weight: 600;
+
+        &:visited {
+          color: $primary-color;
+        }
       }
     }
   }

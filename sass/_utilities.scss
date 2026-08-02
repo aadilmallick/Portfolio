@@ -18,14 +18,23 @@
   &-primary {
     color: $dark-color;
     background-color: $primary-color;
+    &:visited {
+      color: $dark-color;
+    }
   }
   &-light {
     color: $dark-color;
     background-color: $light-color;
+    &:visited {
+      color: $dark-color;
+    }
   }
   &-dark {
     color: $light-color;
     background-color: $dark-color;
+    &:visited {
+      color: $light-color;
+    }
   }
 }
 

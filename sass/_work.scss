@@ -144,6 +144,11 @@
       padding-left: 1rem;
       padding-right: 1rem;
       transition: color $transition-medium;
+
+      &:visited {
+        color: white;
+      }
+
       &:hover {
         color: $dark-color;
       }

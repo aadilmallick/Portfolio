@@ -94,6 +94,10 @@
   margin-top: auto;
   will-change: transform;
 
+  &:visited {
+    color: #fff;
+  }
+
   &:hover {
     background: #218838;
     transform: translateY(-3px) scale(1.01);
